@@ -1,0 +1,22 @@
+name: audio_codec
+description: Decodes audio to raw PCM and encodes WAV to AAC with Android MediaCodec.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.13.5
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.snoozeai.audio_codec
+        pluginClass: AudioCodecPlugin
