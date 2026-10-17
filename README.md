@@ -1,108 +1,112 @@
 <p align="center">
-  <img src="assets/icon/logo_square.png" width="160" alt="Logo Radio CHROME : une bouche qui hurle, dents en chrome, néons magenta et cyan">
+  <img src="assets/icon/logo_square.png" width="160" alt="Radio CHROME logo: a screaming mouth with chrome teeth, magenta and cyan neon">
 </p>
 
 <h1 align="center">Radio CHROME</h1>
 
 <p align="center">
-  <b>Le radio-réveil pirate cyberpunk qui t'arrache du lit.</b><br>
-  Chaque matin, une émission de radio unique, écrite, jouée et mixée par des IA, rien que pour toi.
+  <b>The cyberpunk pirate radio alarm clock that drags you out of bed.</b><br>
+  Every morning, a one-off radio show written, performed and mixed by AI, just for you.
 </p>
 
 ---
 
 > *« BONJOUR SOLAR CITY !!! Bzzzt ! Ici VOLT, antenne pirate de Radio CHROME, et il est sept heures pile. Si tu snoozes encore, je viens démonter ton matelas avec une clé à molette. »*
+> — "GOOD MORNING SOLAR CITY!!! This is VOLT, pirate frequency of Radio CHROME, it's seven sharp. Hit snooze again and I'm coming to take your mattress apart with a wrench."
 >
 > *« Doucement, Volt… Le bouton snooze ne vole pas le temps. Il le déguise. »*
+> — "Easy, Volt… The snooze button doesn't steal time. It disguises it."
 
-## Le concept
+The show is in French (the app was made for a French-speaking listener); the code and docs are in English.
 
-À l'heure du réveil, ce n'est pas une sonnerie qui démarre : c'est **une vraie émission de radio** d'une douzaine de minutes.
+## The idea
 
-- 📡 **Un grésillement de signal pirate**, puis le générique de la station.
-- 🎙️ **Deux animateurs** avec chacun sa voix et son caractère :
-  - **VOLT**, DJ pirate à la voix rauque, survolté et sans filtre ;
-  - **NYX**, chaleureuse, taquine et sage, qui calme le jeu d'une phrase.
-- 🌦️ **La « Météo du Sprawl »** et le **« Flash corpo »** : la vraie météo et la vraie actu du jour, cherchées sur le web et racontées à la sauce cyberpunk. Les faits restent exacts.
-- 🎵 **De vrais morceaux chantés**, en anglais, japonais ou coréen (darksynth, J-pop, K-pop, techno, drum & bass, phonk, hardstyle), qui montent en énergie jusqu'au dernier, celui qui te jette du lit.
-- 📢 **De fausses pubs du futur**, comme l'implant SnoozeNull, qui *« coupe votre bouton snooze de l'intérieur »*.
-- 😤 **Le rapport de snooze** : appuie sur snooze, et 9 minutes plus tard VOLT et NYX te tombent dessus. Ça empire à chaque snooze.
+When the alarm goes off, you don't get a ringtone: you get **a real radio show** of about twelve minutes.
 
-La ville a un nom de code : chez soi, Sierre devient **SOLAR CITY**, « la Cité du Soleil ». En voyage, la radio suit le fuseau horaire du téléphone, et Tokyo devient **NÉO-TOKYO**.
+- 📡 **Pirate signal static**, then the station theme.
+- 🎙️ **Two hosts**, each with their own voice and personality:
+  - **VOLT**, a raspy, hyperactive, unfiltered pirate DJ;
+  - **NYX**, warm, teasing and wise, who settles things down in one line.
+- 🌦️ **"Sprawl Weather"** and the **"Corpo Flash"**: today's real weather and real news, found on the web and told cyberpunk-style. The facts stay accurate.
+- 🎵 **Real songs with vocals** in English, Japanese or Korean (darksynth, J-pop, K-pop, techno, drum & bass, phonk, hardstyle), building up in energy until the last one throws you out of bed.
+- 📢 **Fake ads from the future**, like the SnoozeNull implant that "cuts off your snooze button from the inside".
+- 😤 **The snooze report**: hit snooze and 9 minutes later VOLT and NYX come down on you. It gets worse every time.
 
-## Fonctionnalités
+The city gets a code name: at home, Sierre (Switzerland's "City of the Sun") becomes **SOLAR CITY**. On a trip, the radio follows the phone's time zone, and Tokyo becomes **NÉO-TOKYO**.
+
+## Features
 
 | | |
 |---|---|
-| ⏰ **Un réveil par jour** | une heure et un interrupteur pour chaque jour de la semaine, plus un interrupteur général |
-| 🔕 **Sans réseau au réveil** | l'émission est préparée à l'avance (30 min par défaut) ; au moment de sonner, tout est déjà sur le téléphone |
-| 🛟 **Toujours une sonnerie** | si la préparation échoue, le réveil joue l'émission précédente, ou une sonnerie de secours intégrée |
-| 🎧 **Bluetooth automatique** | le son part sur l'enceinte ou les écouteurs connectés, sinon sur le haut-parleur |
-| 📻 **La radio continue** | « Je me lève » coupe le mode alarme, mais l'émission continue dans l'app à l'endroit exact |
-| 💿 **Playlist de la station** | chaque morceau payé est gardé et revient en rotation : 2 nouveaux par jour suffisent |
-| ✈️ **Change de fuseau horaire** | les réveils se recalent à l'ouverture de l'app, et la radio change de ville |
-| 📤 **Partage** | envoie l'émission du jour à un pote en `.m4a` (WhatsApp, Discord…) |
+| ⏰ **One alarm per day** | a time and an on/off switch for each day of the week, plus a master switch |
+| 🔕 **No network needed at ring time** | the show is prepared ahead of time (30 min by default); when the alarm rings, everything is already on the phone |
+| 🛟 **Always rings** | if preparation fails, the alarm plays the previous show, or a bundled fallback ring |
+| 🎧 **Automatic Bluetooth** | sound goes to the connected speaker or earbuds, otherwise the phone speaker |
+| 📻 **The radio keeps going** | "I'm up" stops the alarm, but the show carries on in the app from the exact same spot |
+| 💿 **Station playlist** | every paid-for song is kept and rotated back in: 2 new ones a day is enough |
+| ✈️ **Time-zone aware** | alarms re-align when the app opens, and the radio switches city |
+| 📤 **Sharing** | send today's show to a friend as an `.m4a` (WhatsApp, Discord…) |
 
-## Comment c'est fabriqué
+## How it's made
 
 ```
-                 30 min avant le réveil (tâche de fond Android)
- ┌──────────────────────────────────────────────────────────────────────┐
- │  Grok 4.7 + recherche web ──► conducteur JSON (répliques, pubs, snooze)│
- │  Suno v6 (en parallèle) ────► 2 nouveaux morceaux → playlist           │
- │                    │                                                   │
- │                    ▼                                                   │
- │  Gemini 3.8 Flash TTS ──► une réplique = un appel, chaque voix garantie │
- │                    │                                                   │
- │                    ▼                                                   │
- │  Mixage maison (Dart) : signal pirate, générique, voix sur fond        │
- │  musical, morceaux en fondu, jingles  ──► show.m4a + 2 versions snooze │
- └──────────────────────────────────────────────────────────────────────┘
-                     À l'heure du réveil : le plugin `alarm` joue le fichier
+                 30 min before the alarm (Android background job)
+ ┌───────────────────────────────────────────────────────────────────────┐
+ │  Grok 4.7 + web search ──► JSON rundown (lines, ads, snooze roasts)   │
+ │  Suno v6 (in parallel) ──► 2 new songs → station playlist             │
+ │                    │                                                  │
+ │                    ▼                                                  │
+ │  Gemini 3.8 Flash TTS ──► one call per line, each voice guaranteed    │
+ │                    │                                                  │
+ │                    ▼                                                  │
+ │  Custom mixer (Dart): pirate static, theme, voices over a music bed,  │
+ │  songs with fades, jingles ──► show.m4a + 2 snooze versions           │
+ └───────────────────────────────────────────────────────────────────────┘
+                     At ring time: the `alarm` plugin plays the file
 ```
 
-| Rôle | Modèle | Via |
+| Role | Model | Through |
 |---|---|---|
-| Orchestrateur : script, actu, météo | `x-ai/grok-4.7`, recherche web native | OpenRouter |
-| Voix de VOLT, NYX et des pubs | `google/gemini-3.8-flash-tts` (voix *Zubenelgenubi*, *Aoede*, *Sadaltager*) | OpenRouter |
-| Morceaux | Suno **v6** | APIMart (revendeur, non officiel) |
-| Générique de la station (généré une seule fois) | `google/lyria-3-clip-preview` | OpenRouter |
-| Morceaux de secours si Suno est en panne | `google/lyria-3-pro-preview` | OpenRouter |
+| Orchestrator: script, news, weather | `x-ai/grok-4.7` with native web search | OpenRouter |
+| Voices of VOLT, NYX and the ads | `google/gemini-3.8-flash-tts` (voices *Zubenelgenubi*, *Aoede*, *Sadaltager*) | OpenRouter |
+| Songs | Suno **v6** | APIMart (unofficial reseller) |
+| Station theme (generated once) | `google/lyria-3-clip-preview` | OpenRouter |
+| Fallback songs when Suno is down | `google/lyria-3-pro-preview` | OpenRouter |
 
-### Coût
+### Cost
 
-Environ **0,20 à 0,35 $ par matin** (≈ 6 à 10 $ par mois) pour une émission de 12 minutes :
+About **$0.20–0.35 per morning** (≈ $6–10 a month) for a 12-minute show:
 
-| Poste | Par matin |
+| Item | Per morning |
 |---|---|
-| Voix (≈ 6 min de parole) | ~0,10-0,15 $ |
-| Grok (script et recherche) | ~0,05-0,10 $ |
-| Suno (une génération = 2 morceaux) | 0,05 $ |
+| Voices (≈ 6 min of speech) | ~$0.10–0.15 |
+| Grok (script and search) | ~$0.05–0.10 |
+| Suno (one generation = 2 songs) | $0.05 |
 
-Le générique ne se paie qu'une fois. La parole est le poste le plus cher : une émission plus courte coûte moins.
+The theme is paid for once. Speech is the most expensive part: a shorter show costs less.
 
-## Installation
+## Setup
 
-### Prérequis
+### Requirements
 
-- **Flutter** (stable, Dart ≥ 3.13) et un **JDK 17**
-- Un **SDK Android** avec la plateforme 36
-- Un téléphone **Android** (testé sur Pixel 10 Pro XL)
-- `ffmpeg` dans le PATH, uniquement pour les outils PC
-- Une clé **[OpenRouter](https://openrouter.ai)**, et en option une clé **[APIMart](https://apimart.ai)** pour Suno
+- **Flutter** (stable, Dart ≥ 3.13) and a **JDK 17**
+- An **Android SDK** with platform 36
+- An **Android** phone (tested on a Pixel 10 Pro XL)
+- `ffmpeg` on the PATH, for the PC tools only
+- An **[OpenRouter](https://openrouter.ai)** key, and optionally an **[APIMart](https://apimart.ai)** key for Suno
 
-### Les clés
+### Keys
 
-Crée un fichier `.env` à la racine (il est ignoré par git) :
+Create a `.env` file at the project root (git ignores it):
 
 ```dotenv
 OPENROUTER_API_KEY=sk-or-...
 APIMART_API_KEY=...
 ```
 
-Sans clé APIMart, la musique vient de la playlist déjà constituée, puis de Lyria.
+Without an APIMart key, music comes from the existing playlist, then from Lyria.
 
-### Compiler et installer
+### Build and install
 
 ```powershell
 flutter pub get
@@ -111,76 +115,77 @@ flutter build apk --release --dart-define-from-file=.env
 adb install -r build\app\outputs\flutter-apk\app-release.apk
 ```
 
-`--dart-define-from-file=.env` intègre les clés à l'APK, pour ne pas avoir à les taper sur le téléphone. Une clé saisie dans **Réglages** reste prioritaire.
+`--dart-define-from-file=.env` bakes the keys into the APK so you don't have to type them on the phone. A key entered in **Réglages** (Settings) takes precedence.
 
-> ⚠️ Avec cette option, **les clés sont lisibles dans l'APK**. C'est sans risque pour un usage perso, mais **ne partage jamais cet APK**. Pour le distribuer, compile-le sans `--dart-define-from-file` et saisis les clés dans l'app.
+> ⚠️ With this option, **the keys can be read from the APK**. That's fine for personal use, but **never share that APK**. To distribute the app, build it without `--dart-define-from-file` and enter the keys in the app.
 
-### Sur le téléphone
+### On the phone
 
-1. Accepte les **notifications**, et l'**exception d'optimisation de batterie** quand le bandeau la propose. Sans elle, Android peut couper le réseau la nuit et l'émission ne sera pas préparée.
-2. Dans **⚙️ Réglages** : ton prénom, ce qui t'intéresse dans l'actu, et la ville (vraie ville + nom à l'antenne).
-3. Règle **l'heure de chaque jour**, puis allume l'interrupteur **Réveil**.
-4. Pour tester tout de suite : **« Préparer l'émission maintenant »** (2-3 min), puis **« Tester la sonnerie (10 s) »**, écran verrouillé.
+1. Allow **notifications**, and the **battery optimization exemption** when the banner offers it. Without it, Android may cut network access overnight and the show won't be prepared.
+2. In **⚙️ Réglages** (Settings): your first name, what you care about in the news, and the city (real city + on-air name).
+3. Set **each day's time**, then turn on the **Réveil** (Alarm) switch.
+4. To test right away: **"Préparer l'émission maintenant"** (prepare the show now, 2–3 min), then **"Tester la sonnerie (10 s)"** (test ring) with the screen locked.
 
-Sur Samsung, Xiaomi, Huawei et autres surcouches agressives, voir aussi [dontkillmyapp.com](https://dontkillmyapp.com).
+On Samsung, Xiaomi, Huawei and other aggressive Android skins, see also [dontkillmyapp.com](https://dontkillmyapp.com).
 
-> ✈️ **En voyage** : après avoir changé de fuseau horaire, **ouvre l'app une fois** pour que les réveils se recalent sur l'heure locale.
+> ✈️ **Traveling**: after changing time zones, **open the app once** so the alarms re-align to local time.
 
-## Outils PC
+## PC tools
 
-Pour régler les prompts et le son sans le téléphone. Les clés sont lues dans `.env`, les résultats sont écrits dans `out/` :
+To tune prompts and sound without the phone. Keys are read from `.env`, results go to `out/`:
 
 ```powershell
-# Une émission complète (Grok + voix + Suno + mixage)
+# A full show (Grok + voices + Suno + mix)
 dart run tool/generate_show.dart --minutes 12 --name Alex
-dart run tool/generate_show.dart --tokyo            # l'épisode NÉO-TOKYO
+dart run tool/generate_show.dart --tokyo            # the NÉO-TOKYO episode
 
-# Seulement le script de Grok (quelques centimes, aucun audio)
+# Grok's script only (a few cents, no audio)
 dart run tool/test_script.dart
 
-# Une génération Suno seule
+# A single Suno generation
 dart run tool/test_suno.dart "cyberpunk hardstyle, japanese female vocals"
 ```
 
-Le générique et la playlist sont gardés dans `out/station` et `out/library`, comme sur le téléphone.
+The theme and the playlist persist in `out/station` and `out/library`, just like on the phone.
 
-## Structure du projet
+## Project layout
 
 ```
 lib/
-├── main.dart                 # init, écran de sonnerie quand l'alarme démarre
-├── app_store.dart            # réglages, plan de réveil par jour, clés (stockage sécurisé)
-├── scheduler.dart            # programmation des réveils et de la préparation, snooze
-├── screens/                  # accueil, réglages, sonnerie, lecteur « en direct »
-└── services/                 # en Dart pur : tourne sur le téléphone ET sur le PC
-    ├── station.dart          # identité : VOLT, NYX, villes, styles musicaux
-    ├── show_generator.dart   # le chef d'orchestre de l'émission
-    ├── radio_mixer.dart      # mise en ondes : générique, fond musical, jingles
-    ├── audio_pcm.dart        # lecture, rééchantillonnage, écriture WAV
-    ├── music_library.dart    # playlist de la station et rotation
+├── main.dart                 # init, ring screen when the alarm starts
+├── app_store.dart            # settings, per-day alarm plan, keys (secure storage)
+├── scheduler.dart            # alarm and pre-wake job scheduling, snooze
+├── screens/                  # home, settings, ring, "live" player
+└── services/                 # pure Dart: runs on the phone AND on the PC
+    ├── station.dart          # identity: VOLT, NYX, cities, music styles
+    ├── show_generator.dart   # the show's conductor
+    ├── radio_mixer.dart      # on-air layout: theme, music bed, jingles
+    ├── audio_pcm.dart        # decoding, resampling, WAV writing
+    ├── music_library.dart    # station playlist and rotation
     ├── openrouter.dart       # Grok, TTS, Lyria
-    └── apimart_suno.dart     # Suno via APIMart
-packages/audio_codec/         # plugin Android maison : MP3 → PCM, WAV → AAC (MediaCodec)
-tool/                         # scripts PC (voir ci-dessus)
-assets/                       # logo, sonnerie de secours
+    └── apimart_suno.dart     # Suno through APIMart
+packages/audio_codec/         # in-house Android plugin: MP3 → PCM, WAV → AAC (MediaCodec)
+tool/                         # PC scripts (see above)
+assets/                       # logo, fallback ring
 ```
 
-## Notes techniques
+## Technical notes
 
-- **Pourquoi un seul fichier audio ?** Le plugin `alarm` joue un fichier, même téléphone verrouillé ou app tuée. Tout mixer à l'avance garde cette fiabilité, et ça supprime les blancs entre les rubriques.
-- **Une réplique = un appel TTS.** En mode multi-voix, Gemini peut mélanger les voix et les consignes de jeu. Une voix par appel garantit que VOLT reste VOLT.
-- **Grok renvoie parfois deux JSON collés** (un brouillon vide, puis le vrai). Le parseur les sépare et garde le plus complet. Si la réponse est illisible, elle est enregistrée dans `Android/data/com.snoozeai.snooze_ai/files/debug/`, lisible avec `adb`.
-- **`permission_handler` est figé en 12.x.** La 13 exige la plateforme Android 37, absente du SDK utilisé ici.
-- **`kotlin.incremental=false`** (dans `android/gradle.properties`) : le cache pub (C:) et le projet (D:) sont sur deux disques, ce qui casse la compilation Kotlin incrémentale sous Windows.
-- **Icône** : régénérée avec `dart run flutter_launcher_icons` (config dans `pubspec.yaml`).
+- **Why a single audio file?** The `alarm` plugin plays one file, even with the phone locked or the app killed. Mixing everything ahead of time keeps that reliability, and removes gaps between segments.
+- **One TTS call per line.** In multi-speaker mode, Gemini can blend voices and acting directions. One voice per call guarantees VOLT stays VOLT.
+- **Grok sometimes returns two JSON objects back to back** (an empty draft, then the real one). The parser splits them and keeps the most complete. An unreadable answer is saved to `Android/data/com.snoozeai.snooze_ai/files/debug/`, readable over `adb`.
+- **`permission_handler` is pinned to 12.x.** Version 13 requires Android platform 37, which the SDK used here lacks.
+- **`kotlin.incremental=false`** (in `android/gradle.properties`): the pub cache (C:) and the project (D:) sit on different drives, which breaks incremental Kotlin builds on Windows.
+- **Icon**: regenerate with `dart run flutter_launcher_icons` (config in `pubspec.yaml`).
 
-## Feuille de route
+## Roadmap
 
-- [ ] Vérifier le réveil réel sur plusieurs matins (préparation en tâche de fond, snooze)
-- [ ] Recaler les réveils automatiquement au changement de fuseau, sans ouvrir l'app
-- [ ] Une version iPhone (AlarmKit)
-- [ ] Épisodes spéciaux : week-end, anniversaire, jours fériés
+- [ ] Check real wake-ups over several mornings (background preparation, snooze)
+- [ ] Re-align alarms automatically on time-zone change, without opening the app
+- [ ] An iPhone version (AlarmKit)
+- [ ] Special episodes: weekends, birthdays, public holidays
 
 ---
 
-<p align="center"><i>Radio CHROME, on coupe pas. On baisse juste assez pour que tu entendes tes propres pas.</i></p>
+<p align="center"><i>« Radio CHROME, on coupe pas. On baisse juste assez pour que tu entendes tes propres pas. »</i><br>
+"Radio CHROME never cuts out. We just turn it down enough for you to hear your own footsteps."</p>

@@ -1,5 +1,5 @@
 name: snooze_ai
-description: "Réveil IA : matinale générée par Grok, Gemini TTS et Lyria"
+description: "Radio CHROME: a cyberpunk pirate radio alarm clock whose morning show is written, voiced and mixed by AI."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -105,7 +105,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 
-# App icon ("LE CRI"). Regenerate with: dart run flutter_launcher_icons
+# App icon (the screaming-mouth logo). Regenerate with: dart run flutter_launcher_icons
 flutter_launcher_icons:
   android: true
   ios: false
